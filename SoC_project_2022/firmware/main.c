@@ -188,19 +188,15 @@ static void rgbled_test(void)
 static void labcuatro(void)
 {
 	unsigned int i;
-	unsigned int j;
-	unsigned int k;
-	unsigned int suma;
-	unsigned int resta;
 	unsigned short temp2 =0;
 	printf("Actividad del laboratorio 4... se interrumpe con el botton 1\n");
 	while(!(buttons_in_read()&1)) {
 		unsigned short temp = switchs_in_read();
 		if (temp2 != temp){
-			printf("Opción seleccionada (#Bit) : %i\n", temp);
+			printf("Opción seleccionada: %i\n", temp);
 			if(temp == 1){
 				// Contador de 1 hasta 65535
-				for(i=1; i<65536; i=i+1) {
+				for(i=1; i<65536; i=i+1) { //Poner un break para salir dentro del for
 					leds_out_write(i);
 					delay_ms(500);
 					temp = switchs_in_read();
@@ -276,10 +272,10 @@ int main(void)
 	uart_init();
 	//timer_init_irq(1000);
 
-    	puts("\n                                  Pichula  Feliz                                   \n");
-    	puts("Si la vida te da limones, ráyalos para hacer postres, haz limonada y siembra las\n");
-    	puts("            semillas. Así venderás algo y tendrás insumos para el futuro            \n");
-    	puts("\n                     Profe, +0.5 por la frase motivacional :v                     \n");
+    	// puts("\n                                  Pichula  Feliz                                   \n");
+    	// puts("Si la vida te da limones, ráyalos para hacer postres, haz limonada y siembra las\n");
+    	// puts("            semillas. Así venderás algo y tendrás insumos para el futuro            \n");
+    	// puts("\n                     Profe, +0.5 por la frase motivacional :v                     \n");
 	puts("\nSoC - RiscV project UNAL 2022-1-- CPU testing software built "__DATE__" "__TIME__"\n");
 	help();
 	prompt();

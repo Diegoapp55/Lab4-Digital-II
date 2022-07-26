@@ -13,3 +13,9 @@
        python3 load.py
 4. Conectarse con la Nexys mediante el firmware:
        litex_term /dev/ttyUSB1 --kernel firmware/firmware.bin
+
+## Como agregar modulos de Verilog o VHDL a Litex
+
+Revisar esto:
+
+"/home/diegoapp55/Documentos/UNAL/Digital-II/Lab-4/Lab4-Digital-II/SoC_project_2022/build/nexys4ddr/software/include/generated/ el csr"
